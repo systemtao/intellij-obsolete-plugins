@@ -34,7 +34,7 @@ public class ResinStartupPolicy implements JavaCommandLineStartupPolicy {
 
   private static final Logger LOG = Logger.getInstance(ResinStartupPolicy.class);
   @NonNls
-  private static final String RESIN_RUN_PROP_FILE = "ResinRun.properties";
+  private static final String RESIN_RUN_PROP_FILE = "properties/ResinRun.properties";
   @NonNls
   private static final String DEBUG_VM_PARAMS_PROP = "resin.debug.vm.param";
   @NonNls
@@ -250,7 +250,7 @@ public class ResinStartupPolicy implements JavaCommandLineStartupPolicy {
     }
     resinRunProps = new Properties();
     try {
-      resinRunProps.load(this.getClass().getResourceAsStream(RESIN_RUN_PROP_FILE));
+      resinRunProps.load(this.getClass().getClassLoader().getResourceAsStream(RESIN_RUN_PROP_FILE));
     }
     catch (IOException e) {
       throw new ExecutionException(ResinBundle.message("resin.run.startup.no.prop"));

@@ -259,7 +259,7 @@ public class ResinModel extends ResinModelBase<ResinModel.ResinLocalModelData> i
     private boolean myDebugConfiguration = false;
     private boolean myAutoBuildClassPath = false;
     private boolean myReadOnlyConfiguration = false;
-    private String myAdditionalParameters = "";
+    private String myAdditionalParameters = "-server app-0";
 
     private String myDeployMode = DEPLOY_MODE_AUTO;
 

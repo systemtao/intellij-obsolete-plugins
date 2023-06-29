@@ -9,7 +9,9 @@ import java.util.Properties;
  */
 final class StartupClassFinder {
   //Constants
-  private static final String MAPPING_PROP_FILE = "org/intellij/j2ee/web/resin/resin/version/versionmapping.properties";
+//  private static final String MAPPING_PROP_FILE = "org/intellij/j2ee/web/resin/resin/version/versionmapping.properties";
+  private static final String MAPPING_PROP_FILE = "properties/versionmapping.properties";
+
 
   //Variables
   private static Properties versionMapping = null;
@@ -21,7 +23,7 @@ final class StartupClassFinder {
     }
 
     do {
-      String startup = versionMapping.getProperty(version);
+      String startup = versionMapping.getProperty(version.substring(0, 1));
       if (startup != null) {
         return startup;
       }

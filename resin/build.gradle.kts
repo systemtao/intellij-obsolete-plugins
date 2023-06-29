@@ -17,7 +17,7 @@ java.sourceSets["main"].java {
 // Configure Gradle IntelliJ Plugin
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {
-    version.set("2023.1.1")
+    version.set("LATEST-EAP-SNAPSHOT")
     type.set("IU")
 
     plugins.set(listOf(
@@ -35,7 +35,7 @@ tasks {
     }
 
     patchPluginXml {
-        sinceBuild.set("231")
+        sinceBuild.set("232")
         untilBuild.set("232.*")
     }
 

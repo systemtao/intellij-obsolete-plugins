@@ -57,6 +57,7 @@
             <properties>
               <editable value="true"/>
               <enabled value="true"/>
+              <text value=""/>
             </properties>
           </component>
           <component id="2c211" class="com.intellij.ui.components.JBLabel" binding="myAdditionalResinCommandLineLabel">
@@ -73,6 +74,7 @@
             </constraints>
             <properties>
               <dialogCaption resource-bundle="messages/ResinBundle" key="run.config.dlg.additional.params"/>
+              <text value="-server app-0"/>
             </properties>
           </component>
         </children>
